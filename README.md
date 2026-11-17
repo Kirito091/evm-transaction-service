@@ -47,4 +47,3 @@ curl -X POST http://localhost:8081/api/v1/transactions/0x.../refresh
 The demo uses an in-memory chain adapter and never broadcasts anything. RPC mode requires `CHAIN_MODE=rpc`, `CHAIN_ID`, and `RPC_URL`; the service checks `eth_chainId` before broadcasting or refreshing and fails closed on a mismatch. Use a test network only. Never submit a private key or seed phrase. Raw signed transactions are broadcast-capable bearer artifacts, so do not paste them into public services or issue trackers.
 
 The concise behavioral specification is in [`docs/SPEC.md`](docs/SPEC.md).
-

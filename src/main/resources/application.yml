@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: evm-transaction-service
+  datasource:
+    url: jdbc:h2:file:./data/txservice;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+
+chain:
+  mode: ${CHAIN_MODE:demo}
+  id: ${CHAIN_ID:11155111}
+  confirmations: ${CHAIN_CONFIRMATIONS:3}
+  rpc-url: ${RPC_URL:}
+
+server:
+  port: ${PORT:8081}
